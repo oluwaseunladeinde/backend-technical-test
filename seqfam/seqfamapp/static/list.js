@@ -70,16 +70,7 @@ function renderInterPro(item) {
 function renderPfam(item) {
     return ['accession', 'name', 'description', 'interpro_entry'].map((key,) => {
         const td = document.createElement('td');
-
-        if (key !== 'interpro_entry')
-            td.innerText = item[key];
-        else if (item[key] !== null) {
-            const anchor = document.createElement('a');
-            anchor.href = `/interpro/${item[key]}/`;
-            anchor.innerText = item[key];
-            td.appendChild(anchor);
-        }
-
+        td.innerText = item[key] !== null ? item[key] : '';
         return td;
     });
 }
