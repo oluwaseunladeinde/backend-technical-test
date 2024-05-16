@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="vf-no-js | vf-smooth-scroll">
+    <head>
+        <title>{{ page_title|default:"InterPro" }}</title>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport">
+        <link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.5.15/css/styles.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+    <body class="vf-body | vf-stack vf-stack--400">
+        <header class="vf-header">
+            <h1>InterPro</h1>
+        </header>
+        <nav class="vf-navigation vf-navigation--main | vf-cluster">
+            <ul class="vf-navigation__list | vf-list | vf-cluster__inner">
+                <li class="vf-navigation__item">
+                    <a href="{% url 'interpro_list' %}"
+                       class="vf-navigation__link"
+                       {% if page_title == 'InterPro' %} aria-current="page"{% endif %}
+                    >
+                        InterPro entries
+                    </a>
+                </li>
+                <li class="vf-navigation__item">
+                    <a href="{% url 'pfam_list' %}"
+                       class="vf-navigation__link"
+                       {% if page_title == 'Pfam' %} aria-current="page"{% endif %}
+                    >
+                        Pfam models
+                    </a>
+                </li>
+                <li class="vf-navigation__item">
+                    <a href="{% url 'uniprot_list' %}"
+                       class="vf-navigation__link"
+                       {% if page_title == 'Proteins' %} aria-current="page"{% endif %}
+                    >
+                        UniProtKB proteins
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock content %}
+    </body>
+</html>
