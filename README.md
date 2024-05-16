@@ -62,7 +62,7 @@ Protein sequences can be lengthy, and storing them uncompressed can consume sign
 especially when dealing with large datasets (hundreds of millions of sequences).
 Currently, the project stores protein sequences in a database table without compression.
 
-**Task:** update the project so sequences are stored using support gzip compression. 
+**Task:** update the project so sequences are stored using gzip compression. 
 Additionally, create a custom migration script to compress the existing sequences in the database.
 
 ## Exercise 4: sequence length
