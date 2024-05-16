@@ -6,7 +6,7 @@ from . import views
 router = DefaultRouter()
 router.register(r'interpro', views.InterProViewSet)
 router.register(r'pfam', views.PfamViewSet)
-router.register(r'uniprot', views.SequenceViewSet)
+router.register(r'uniprot', views.UniProtKBViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),

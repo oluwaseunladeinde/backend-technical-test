@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import UniProtKBEntry, InterProEntry, PfamEntry, PfamMatch
 
 
-class SequenceSerializer(serializers.ModelSerializer):
+class UniProtKBSerializer(serializers.ModelSerializer):
     class Meta:
         model = UniProtKBEntry
         fields = '__all__'

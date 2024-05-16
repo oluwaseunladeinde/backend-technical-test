@@ -2,12 +2,12 @@ from django.shortcuts import render
 from rest_framework import viewsets
 
 from .models import UniProtKBEntry, InterProEntry, PfamEntry
-from .serializers import SequenceSerializer, InterProSerializer, PfamSerializer
+from .serializers import UniProtKBSerializer, InterProSerializer, PfamSerializer
 
 
-class SequenceViewSet(viewsets.ReadOnlyModelViewSet):
+class UniProtKBViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = UniProtKBEntry.objects.all()
-    serializer_class = SequenceSerializer
+    serializer_class = UniProtKBSerializer
 
 
 class InterProViewSet(viewsets.ReadOnlyModelViewSet):
