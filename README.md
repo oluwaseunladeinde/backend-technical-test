@@ -39,12 +39,12 @@ the InterPro entries in the database and, for each InterPro entry, the number of
 The project currently doesn't display the correct number. Indeed, instead of the number of proteins, 
 the number of individual Pfam annotations is displayed, which means that some proteins are counted more than once.
 
-Provide a fix so that each protein associated with an InterPro entry is counted only once,
+**Task:** provide a fix so that each protein associated with an InterPro entry is counted only once,
 regardless of the number of annotations it receives from Pfam entries.
 
 ## Exercise 2: implement a detailed endpoint for InterPro entries
 
-Your task is to create a detailed endpoint that retrieves information about InterPro entries based on their accession. 
+**Task:** create a detailed endpoint that retrieves information about an InterPro entry based on its accession. 
 The endpoint should return the following properties:
 
 * `accession`: the unique identifier for the InterPro entry
@@ -60,9 +60,10 @@ e.g. [/api/interpro/IPR016087](http://127.0.0.1:8000/api/interpro/IPR016087).
 
 Protein sequences can be lengthy, and storing them uncompressed can consume significant database storage, 
 especially when dealing with large datasets (hundreds of millions of sequences).
-Currently, the project stores protein sequences in a database table without compression. 
-Your task is to update the model and serializer to support gzip compression for storing protein sequences. 
-Additionally, you need to create a custom migration script to compress the existing sequences in the database.
+Currently, the project stores protein sequences in a database table without compression.
+
+**Task:** update the project so sequences are stored using support gzip compression. 
+Additionally, create a custom migration script to compress the existing sequences in the database.
 
 ## Exercise 4: sequence length
 
@@ -70,12 +71,15 @@ The [uniprot](http://127.0.0.1:8000/uniprot) page lists all UniProtKB entries in
 The fourth column is the length of the sequence.
 The [/api/uniprot](http://127.0.0.1:8000/api/uniprot) endpoint, where the data is fetched from, returns the full sequence of each protein.
 This is inefficient, as we only need the length.
-Update the project so the length is returned instead of the sequence.
+
+**Task:** update the project so the length is returned instead of the sequence.
 
 ## Exercise 5: not all proteins at once
 
 The [/api/uniprot](http://127.0.0.1:8000/api/uniprot) endpoint returns all UniProtKB entries in the database, 
-which can be inefficient with large datasets. Update the endpoint to handle large datasets efficiently.
+which can be inefficient with large datasets. 
+
+**Task:** update the endpoint to handle large datasets efficiently.
 
 ## Exercise 6: use InterPro accessions, not primary keys
 
@@ -83,4 +87,4 @@ The [pfam](http://127.0.0.1:8000/pfam) page lists all Pfam entries in the databa
 For each Pfam entry, the last column should display the accession of the InterPro entry in which the Pfam entry is integrated, if integrated.
 However, instead of showing InterPro accessions, the column currently displays the primary keys of InterPro entries in the database.
 
-Fix the [/api/pfam](http://127.0.0.1:8000/api/pfam) endpoint so it returns InterPro accessions instead of primary keys.
+**Task:** fix the [/api/pfam](http://127.0.0.1:8000/api/pfam) endpoint so it returns InterPro accessions instead of primary keys.
