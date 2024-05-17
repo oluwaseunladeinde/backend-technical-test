@@ -13,6 +13,9 @@ and domains derived from multiple sequence alignments, with its sequence data so
 
 ## Getting started
 
+You need Python 3.10 or higher. Run the following commands to install depencies, 
+create a SQLite database, populate it with fixture data, and start the server.
+
 ```sh
 pip install -r requirements.txt
 cd seqfam
