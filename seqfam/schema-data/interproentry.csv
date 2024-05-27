@@ -1,0 +1,6 @@
+id,accession,name,description
+1,IPR016087,Chalcone_isomerase,Chalcone isomerase
+2,IPR018948,GTP-bd_TrmE_N,"GTP-binding protein TrmE, N-terminal"
+3,IPR017978,GPCR_3_C,"GPCR family 3, C-terminal"
+4,IPR019588,Metabotropic_Glu_rcpt_Homer-bd,"Metabotropic glutamate receptor, Homer-binding domain"
+5,IPR001828,ANF_lig-bd_rcpt,"Receptor, ligand binding region"

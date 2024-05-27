@@ -1,0 +1,11 @@
+id,accession,name,description,interpro_entry_id
+1,PF00003,7tm_3,7 transmembrane sweet-taste receptor of 3 GCPR,3
+2,PF01094,ANF_receptor,Receptor family ligand binding region,5
+3,PF02431,Chalcone,Chalcone-flavanone isomerase,1
+4,PF10396,TrmE_N,GTP-binding protein TrmE N-terminus,2
+5,PF10606,GluR_Homer-bdg,Homer-binding domain of metabotropic glutamate receptor,4
+6,PF12974,Phosphonate-bd,"ABC transporter, phosphonate, periplasmic substrate-binding protein",NULL
+7,PF13290,CHB_HEX_C_1,Chitobiase/beta-hexosaminidase C-terminal domain,NULL
+8,PF16035,Chalcone_2,Chalcone isomerase like,1
+9,PF16036,Chalcone_3,Chalcone isomerase-like,1
+10,PF22572,GPR158_179_EC,GPR158/179 extracellular domain,NULL

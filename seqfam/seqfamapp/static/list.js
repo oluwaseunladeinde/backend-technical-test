@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const endpoint = url.pathname
         .replace(/^\/+/, '')
         .replace(/\/+$/, '');
-
     getData(endpoint);
 });
 
