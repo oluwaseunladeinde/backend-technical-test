@@ -1,7 +1,5 @@
 import os
 import django
-import gzip
-import base64
 
 from .models import UniProtKBEntry
 from utils import compress_sequence
